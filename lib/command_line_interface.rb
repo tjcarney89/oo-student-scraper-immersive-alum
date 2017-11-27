@@ -4,7 +4,7 @@ require 'nokogiri'
 require 'colorize'
 
 class CommandLineInteface
-  BASE_URL = "http://127.0.0.1:4000/"
+  BASE_URL = "http://138.68.11.226:30006/fixtures/student-site/index.html"
 
   def run
     make_students
@@ -25,6 +25,7 @@ class CommandLineInteface
   end
 
   def display_students
+
     Student.all.each do |student|
       puts "#{student.name.upcase}".colorize(:blue)
       puts "  location:".colorize(:light_blue) + " #{student.location}"
